@@ -39,10 +39,10 @@ async function main() {
 	server.setRequestHandler(
 		CallToolRequestSchema,
 		async (request: CallToolRequest) => {
-			// server.sendLoggingMessage({
-			// 	level: "debug",
-			// 	data: `Received CallToolRequests: ${request}`,
-			// });
+			server.sendLoggingMessage({
+				level: "debug",
+				data: `Received CallToolRequests: ${request}`,
+			});
 
 			try {
 				const tool = tools.find((definition) => {
