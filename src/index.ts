@@ -46,11 +46,11 @@ async function main() {
 
 			try {
 				const tool = tools.find((definition) => {
-					return definition.name === request.params.name;
+					return definition.name === request.params.value;
 				});
 
 				if (!tool) {
-					throw new Error(`Unknown tool: ${request.params.name}`);
+					throw new Error(`Unknown tool: ${request.params.value}`);
 				}
 
 				const { inputSchema, handler } = tool;
